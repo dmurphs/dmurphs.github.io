@@ -1,0 +1,77 @@
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss';
+@import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Orbitron|Roboto+Mono');
+
+body {
+  font-family: 'Orbitron', sans-serif;
+
+  .terminal {
+    font-family: 'Roboto Mono', monospace;
+
+    .terminal-header {
+      background: #eeeeee;
+      text-align: center;
+      border-radius: 5px 5px 0px 0px;
+    }
+
+    .terminal-body {
+      color: white;
+      background: rgba(0,0,0,.5);
+      text-align: left;
+      padding: 5px;
+      border-radius: 0px 0px 5px 5px;
+
+      .skills {
+        text-align: center;
+        padding: 20px;
+
+        ul {
+          text-align: left;
+        }
+      }
+
+      .links {
+        text-align: center;
+
+        a {
+          color: white;
+          :hover {
+            color: black;
+          }
+          margin: 15px;
+        }
+      }
+
+      .blinking {
+        position: relative;
+        display: inline-block;
+      }
+      .blinking::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -15px;
+        display: inline-block;
+        background-color: white;
+        vertical-align: top;
+        width: 10px;
+        height: 100%;
+        -webkit-animation: blink 1s step-end infinite;
+        animation: blink 1s step-end infinite;
+      }
+
+      @-webkit-keyframes blink {
+        0% { opacity: 1.0; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1.0; }
+      }
+
+      @keyframes blink {
+        0% { opacity: 1.0; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1.0; }
+      }
+    }
+  }
+}
