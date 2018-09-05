@@ -34,7 +34,7 @@ skillSection skills =
     div [ class "col-xs-12 col-sm-6" ]
         [ i [ class (getFaClass skills) ] []
         , h3 [ class "name" ] [ text (.name skills) ]
-        , ul [] (List.map (\focusArea -> li [] [ text focusArea ]) (.focusAreas skills))
+        , ul [ class "list-group" ] (List.map (\focusArea -> li [ class "list-group-item" ] [ text focusArea ]) (.focusAreas skills))
         ]
 
 
@@ -51,7 +51,7 @@ view =
                         [ div [ class "terminal-header" ] [ text "daniel.murphy--zsh" ]
                         , div [ class "terminal-body" ]
                             [ text "$ ./skills.sh"
-                            , div [ class "skills container" ] (List.map skillSection skillData)
+                            , div [ class "skills row" ] (List.map skillSection skillData)
                             , hr [] []
                             , div [ class "links" ] (List.map getLink links)
                             , hr [] []
