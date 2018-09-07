@@ -24,8 +24,8 @@ skillData =
       , focusAreas =
             [ "scikit-learn"
             , "pandas"
+            , "numpy"
             , "R"
-            , "Optimization"
             ]
       }
     ]

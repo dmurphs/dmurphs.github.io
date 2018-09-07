@@ -1,26 +1,21 @@
 {
-  "name": "elm-webpack-starter",
-  "description": "Webpack setup for writing Elm apps",
-  "version": "0.8.6",
+  "name": "Mysite",
+  "description": "Personal Website",
   "license": "MIT",
-  "author": "Peter Morawiec",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/moarwick/elm-webpack-starter"
-  },
+  "author": "Daniel Murphy",
   "scripts": {
     "start": "webpack-dev-server --hot --inline",
     "prebuild": "rimraf dist",
     "build": "webpack",
-    "reinstall": "npm i rimraf && rimraf node_modules && npm uninstall -g elm && npm i -g elm && npm i && elm package install"
+    "reinstall": "npm i rimraf && rimraf node_modules && npm uninstall -g elm && npm i -g elm && npm i"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "bootstrap-sass": "^3.3.7",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.27.3",
-    "elm": "^0.18.0",
-    "elm-webpack-loader": "^4.3.0",
+    "elm": "^0.19.0",
+    "elm-webpack-loader": "^5.0.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
     "html-webpack-plugin": "^2.28.0",
@@ -34,8 +29,5 @@
     "webpack": "^2.3.1",
     "webpack-dev-server": "^2.4.2",
     "webpack-merge": "^4.1.0"
-  },
-  "dependencies": {
-    "paper": "paperjs/paper.js"
   }
 }

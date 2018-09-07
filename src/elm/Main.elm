@@ -40,12 +40,12 @@ skillSection skills =
 
 view : Html msg
 view =
-    div [ class "container", style [ ( "margin-top", "30px" ), ( "text-align", "center" ) ] ]
+    div [ class "container" ]
         [ -- inline CSS (literal)
           div [ class "row" ]
             [ div [ class "col-xs-12" ]
                 [ div [ class "main-content" ]
-                    [ h1 [] [ text "Daniel Murphy" ]
+                    [ h1 [ style "text-align" "center" ] [ text "Daniel Murphy" ]
                     , hr [] []
                     , div [ class "terminal" ]
                         [ div [ class "terminal-header" ] [ text "daniel.murphy--zsh" ]
