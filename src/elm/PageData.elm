@@ -16,6 +16,8 @@ skillData =
             [ "Django"
             , "Salesforce Platform"
             , "React"
+            , "Angular"
+            , "Elm"
             , "Haskell"
             ]
       }
@@ -26,6 +28,8 @@ skillData =
             , "pandas"
             , "numpy"
             , "R"
+            , "jupyter"
+            , "pytorch"
             ]
       }
     ]

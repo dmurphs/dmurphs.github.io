@@ -12,8 +12,19 @@ body {
   $terminal-body-background: gray;
   $secondary-background-color: white;
 
+
+  .links {
+    text-align: center;
+
+    a {
+      margin: 15px;
+    }
+  }
+
+
   .terminal {
     font-family: 'Roboto Mono', monospace;
+    padding: 20px;
 
     .terminal-header {
       background: $terminal-header-background;
@@ -28,6 +39,16 @@ body {
       padding: 5px;
       border-radius: 0px 0px 5px 5px;
 
+      .circle {
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+      }
+
+      .closebtn {
+        color: red;
+      }
+
       .skills {
         text-align: center;
         padding: 20px;
@@ -36,18 +57,6 @@ body {
           color: $secondary-text-color;
           background: $secondary-background-color;
           text-align: center;
-        }
-      }
-
-      .links {
-        text-align: center;
-
-        a {
-          color: $main-text-color;
-          :hover {
-            color: $secondary-text-color;
-          }
-          margin: 15px;
         }
       }
 

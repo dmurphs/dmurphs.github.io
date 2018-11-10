@@ -16,6 +16,10 @@ main =
     view
 
 
+
+-- VIEW
+
+
 getLink : Link -> Html msg
 getLink link =
     let
@@ -46,15 +50,18 @@ view =
             [ div [ class "col-xs-12" ]
                 [ div [ class "main-content" ]
                     [ h1 [ style "text-align" "center" ] [ text "Daniel Murphy" ]
+                    , div [ class "links" ] (List.map getLink links)
                     , hr [] []
                     , div [ class "terminal" ]
-                        [ div [ class "terminal-header" ] [ text "daniel.murphy--zsh" ]
+                        [ div [ class "terminal-header" ]
+                            [ span [ class "circle closebtn" ] []
+                            , span [ class "circle minimize" ] []
+                            , span [ class "circle expand" ] []
+                            , text "daniel.murphy--zsh"
+                            ]
                         , div [ class "terminal-body" ]
                             [ text "$ ./skills.sh"
                             , div [ class "skills row" ] (List.map skillSection skillData)
-                            , hr [] []
-                            , div [ class "links" ] (List.map getLink links)
-                            , hr [] []
                             , span [ class "blinking" ] [ text "$ " ]
                             ]
                         ]
