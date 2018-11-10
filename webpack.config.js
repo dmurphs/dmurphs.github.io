@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var merge = require('webpack-merge');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 var autoprefixer = require('autoprefixer');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -17,7 +18,7 @@ const isProd = TARGET_ENV == prod;
 
 // entry and output path/filename variables
 const entryPath = path.join(__dirname, 'src/static/index.js');
-const outputPath = path.join(__dirname, 'dist');
+const outputPath = __dirname;
 const outputFilename = isProd ? '[name]-[hash].js' : '[name].js'
 
 console.log('WEBPACK GO! Building for ' + TARGET_ENV);
@@ -48,8 +49,10 @@ var commonConfig = {
         new HtmlWebpackPlugin({
             template: 'src/static/index.html',
             inject: 'body',
-            filename: 'index.html'
-        })
+            filename: 'index.html',
+            inlineSource: '.(js|css)$'
+        }),
+        new HtmlWebpackInlineSourcePlugin()
     ]
 }
 
