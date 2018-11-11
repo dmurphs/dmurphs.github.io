@@ -5778,8 +5778,7 @@ body {
         text-align: center;
         padding: 20px; }
       body .terminal .terminal-body .competencies {
-        display: inline-block;
-        margin-bottom: 20px; }
+        margin: 20px; }
         body .terminal .terminal-body .competencies h2 {
           text-align: center; }
         body .terminal .terminal-body .competencies ul {
