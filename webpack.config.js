@@ -18,7 +18,7 @@ const isProd = TARGET_ENV == prod;
 
 // entry and output path/filename variables
 const entryPath = path.join(__dirname, 'src/static/index.js');
-const outputPath = __dirname;
+const outputPath = path.join(__dirname, 'dist');
 const outputFilename = isProd ? '[name]-[hash].js' : '[name].js'
 
 console.log('WEBPACK GO! Building for ' + TARGET_ENV);
@@ -50,9 +50,9 @@ var commonConfig = {
             template: 'src/static/index.html',
             inject: 'body',
             filename: 'index.html',
-            inlineSource: '.(js|css)$'
+            // inlineSource: '.(js|css)$'
         }),
-        new HtmlWebpackInlineSourcePlugin()
+        // new HtmlWebpackInlineSourcePlugin()
     ]
 }
 
