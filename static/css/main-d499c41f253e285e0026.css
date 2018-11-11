@@ -5753,6 +5753,8 @@ body {
     text-align: center; }
     body .links a {
       margin: 15px; }
+  body .about-me {
+    font-family: 'Roboto Mono', monospace; }
   body .terminal {
     font-family: 'Roboto Mono', monospace;
     padding: 20px; }
@@ -5775,7 +5777,12 @@ body {
       body .terminal .terminal-body .skills {
         text-align: center;
         padding: 20px; }
-        body .terminal .terminal-body .skills ul {
+      body .terminal .terminal-body .competencies {
+        display: inline-block;
+        margin-bottom: 20px; }
+        body .terminal .terminal-body .competencies h2 {
+          text-align: center; }
+        body .terminal .terminal-body .competencies ul {
           color: black;
           background: white;
           text-align: center; }
