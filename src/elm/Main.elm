@@ -68,10 +68,10 @@ view =
                             [ text "$ ./skills.sh"
                             , div [ class "skills row" ] (List.map skillSection skillData)
                             , hr [] []
-                            , div [ class "competencies" ]
+                            , div [ class "row competencies" ]
                                 [ ul [ class "list-group" ] (List.map getCompetencyListItem competencies)
                                 ]
-                            , span [ class "blinking" ] [ text "$ " ]
+                            , div [] [ span [ class "blinking" ] [ text "$ " ] ]
                             ]
                         ]
                     ]
