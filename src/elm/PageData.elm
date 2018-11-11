@@ -1,10 +1,16 @@
-module PageData exposing (Link, Skill, links, skillData)
+module PageData exposing (Link, Skill, aboutMe, competencies, links, skillData)
+
+
+aboutMe : String
+aboutMe =
+    """I am a Mathematician and Software Engineer with a passion for Machine Learning.
+    I earned a Master's degree in Mathematics from the University of Montana.
+    I enjoy learning about new technologies and working on challenging problems."""
 
 
 type alias Skill =
     { name : String
     , faClass : String
-    , focusAreas : List String
     }
 
 
@@ -12,26 +18,27 @@ skillData : List Skill
 skillData =
     [ { name = "Software Engineering"
       , faClass = "fa-laptop"
-      , focusAreas =
-            [ "Django"
-            , "Salesforce Platform"
-            , "React"
-            , "Angular"
-            , "Elm"
-            , "Haskell"
-            ]
       }
     , { name = "Machine Learning"
       , faClass = "fa-brain"
-      , focusAreas =
-            [ "scikit-learn"
-            , "pandas"
-            , "numpy"
-            , "R"
-            , "jupyter"
-            , "pytorch"
-            ]
       }
+    ]
+
+
+competencies : List String
+competencies =
+    [ "Python"
+    , "JavaScript"
+    , "Haskell"
+    , "R"
+    , "Apex"
+    , "Django"
+    , "React"
+    , "Angular"
+    , "scikit-learn"
+    , "pandas"
+    , "numpy"
+    , "pytorch"
     ]
 
 

@@ -21,6 +21,9 @@ body {
     }
   }
 
+  .about-me {
+    font-family: 'Roboto Mono', monospace;
+  }
 
   .terminal {
     font-family: 'Roboto Mono', monospace;
@@ -52,6 +55,16 @@ body {
       .skills {
         text-align: center;
         padding: 20px;
+      }
+
+      .competencies {
+
+        display: inline-block;
+        margin-bottom: 20px;
+
+        h2 {
+          text-align: center;
+        }
 
         ul {
           color: $secondary-text-color;
