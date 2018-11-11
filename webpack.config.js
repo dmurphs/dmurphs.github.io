@@ -1,12 +1,12 @@
-var path = require('path');
-var webpack = require('webpack');
-var merge = require('webpack-merge');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
-var autoprefixer = require('autoprefixer');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-
+const path = require('path');
+const webpack = require('webpack');
+const merge = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const autoprefixer = require('autoprefixer');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const prod = 'production';
 const dev = 'development';
@@ -110,22 +110,11 @@ if (isProd === true) {
                 filename: 'static/css/[name]-[hash].css',
                 allChunks: true,
             }),
-            new CopyWebpackPlugin([{
-                from: 'src/static/img/',
-                to: 'static/img/'
-            }, {
-                from: 'src/favicon.ico'
-            }]),
-
-            // extract CSS into a separate file
-            // minify & mangle JS/CSS
-            new webpack.optimize.UglifyJsPlugin({
-                minimize: true,
-                compressor: {
-                    warnings: false
-                }
-                // mangle:  true
-            })
-        ]
+        ],
+        optimization: {
+            minimizer: [
+                new UglifyJsPlugin()
+            ]
+        }
     });
 }
